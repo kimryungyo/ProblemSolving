@@ -1,0 +1,5 @@
+S = input()
+if "," not in S: print(S); quit()
+numbers = S.split(',')
+total = sum(map(int, numbers))
+print(total)

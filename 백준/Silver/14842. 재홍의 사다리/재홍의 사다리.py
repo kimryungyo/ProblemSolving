@@ -1,0 +1,1 @@
+W,H,N=map(int,input().split());d=H/N;m=(N+1)//2-1;a=m/2*(2*d+(m-1)*d);b=(H*m)-a;l=(b-a)*2;print("%6f"%l)

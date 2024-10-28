@@ -1,0 +1,1 @@
+print(84+abs(ord(input())-ord('I')))

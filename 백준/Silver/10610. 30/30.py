@@ -1,0 +1,6 @@
+nums = list(map(int, input()))
+if 0 not in nums: print(-1); quit()
+sum_ = sum(nums)
+if sum_ % 3 != 0: print(-1); quit()
+sorts = sorted(nums, reverse=True)
+print("".join(map(str, sorts)))

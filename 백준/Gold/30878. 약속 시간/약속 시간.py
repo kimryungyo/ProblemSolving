@@ -1,0 +1,1 @@
+import math;M=int(input());g=math.gcd(a:=M*M*(90-M),b:=108000);print(f"{a//g}/{b//g}")

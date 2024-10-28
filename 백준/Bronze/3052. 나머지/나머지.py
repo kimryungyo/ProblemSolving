@@ -1,0 +1,1 @@
+print(len({n%42 for n in map(int,open(0))}))

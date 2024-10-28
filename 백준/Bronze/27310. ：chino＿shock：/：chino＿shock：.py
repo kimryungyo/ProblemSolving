@@ -1,0 +1,1 @@
+print(len(e:=input())+2+e.count("_")*5)

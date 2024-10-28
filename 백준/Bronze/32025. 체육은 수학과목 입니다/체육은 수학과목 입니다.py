@@ -1,0 +1,1 @@
+print(min(map(int, open(0).read().split()))*50)
