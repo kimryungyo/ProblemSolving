@@ -1,4 +1,4 @@
-# [Bronze II] 숫자 - 10093 
+# [Bronze II] 숫자 - 10093  
 
 [문제 링크](https://www.acmicpc.net/problem/10093) 
 
