@@ -1,4 +1,4 @@
-# [Platinum III] 그림자 - 1151 
+# [Platinum IV] 그림자 - 1151 
 
 [문제 링크](https://www.acmicpc.net/problem/1151) 
 
