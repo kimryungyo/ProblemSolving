@@ -13,7 +13,7 @@ for _ in range(t):
     graph[b].append(a)
 
 queue = deque([1])
-visited = {1,}
+visited = {1}
 
 count = 0
 
