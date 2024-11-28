@@ -151,34 +151,3 @@ sorted_convex_points = sort_points_ccw(convex_points)
 
 convex_area = polygon_area(sorted_convex_points)
 print(f"{convex_area:.10f}")
-
-
-if __name__ == "__debugging__":
-# if __name__ == "__main__":
-    print(sorted_convex_points)
-
-    def visualization(convex_1, convex_2, inter_convex):
-        import matplotlib.pyplot as plt
-        from matplotlib.patches import Polygon
-
-        polygon1 = convex_1
-        polygon2 = convex_2
-        polygon3 = inter_convex
-
-        fig, ax = plt.subplots()
-
-        poly1 = Polygon(polygon1, edgecolor='red', facecolor='red', alpha=0.5)
-        ax.add_patch(poly1)
-
-        poly2 = Polygon(polygon2, edgecolor='blue', facecolor='blue', alpha=0.5)
-        ax.add_patch(poly2)
-
-        poly3 = Polygon(polygon3, edgecolor='green', facecolor='green', alpha=0.5)
-        ax.add_patch(poly3)
-
-        plt.xlim(-10, 10)
-        plt.ylim(-10, 10)
-
-        plt.show()
-
-    visualization(convex_1, convex_2, sorted_convex_points)
