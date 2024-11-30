@@ -18,9 +18,7 @@ PI = Decimal("3.1415926535897932384626433832795028841971693993751058209749445923
 # x값이 커지면 Decimal에서도 오차가 발생할 수 있기 때문에 주기성을 활용해야 한다
 def sin(x):
     epsilon = Decimal(f'1e-{SIN_PREC}')
-    TWO_PI = 2 * PI
-
-    x = x % TWO_PI
+    x = x % (2 * PI)
 
     exp = deno = sign = 1
     result = powers = Decimal(x)
