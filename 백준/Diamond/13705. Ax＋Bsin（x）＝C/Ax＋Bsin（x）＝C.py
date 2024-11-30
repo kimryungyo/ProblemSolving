@@ -5,7 +5,7 @@ PI_PREC = 128
 SIN_PREC = 128
 BIN_PREC = 128
 
-# Decimal에 정확도 적용
+# 정확도 적용
 ALL_PREC = max(PI_PREC, SIN_PREC, BIN_PREC) + 16
 getcontext().prec = ALL_PREC
 
