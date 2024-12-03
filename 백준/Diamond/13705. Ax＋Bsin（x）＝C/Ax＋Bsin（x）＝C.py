@@ -16,21 +16,23 @@ PI = Decimal("3.1415926535897932384626433832795028841971693993751058209749445923
 
 # 테일러 급수를 이용해 sin값을 소수점 이하 약 128자리까지 정확하게 구하는 함수
 # x값이 커지면 Decimal에서도 오차가 발생할 수 있기 때문에 주기성을 활용해야 한다
-def sin(pi: Decimal):
+def sin(x: Decimal):
     epsilon = Decimal(f'1e-{SIN_PREC}')
-    pi %= PI * Decimal("2")
+    x %= PI * Decimal("2")
 
     sin_ = Decimal("0")
     nume = deno = Decimal("1")
-    mulpi = pi
-    for n in range(512):
-        add_ = nume * mulpi / deno
+    mulx = x
+    n = 0
+    while True:
+        add_ = nume * mulx / deno
         sin_ += add_
         if abs(add_) < epsilon: break
         
         nume *= -1
-        deno *= (n * 2 + 2) * (n * 2 + 3)
-        mulpi *= pi * pi
+        deno *= (n + 2) * (n + 3)
+        mulx *= x * x
+        n += 2
 
     return sin_
 
