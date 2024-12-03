@@ -59,6 +59,7 @@ def binary_search():
     return left
 
 
+
 # Ax + Bsin(x) = C 을 만족하는 x값을 반올림해 소수점 여섯째까지 출력하는 코드 
 A, B, C = map(int, input().split())
 result = binary_search()
