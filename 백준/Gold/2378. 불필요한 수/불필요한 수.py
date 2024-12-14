@@ -19,8 +19,8 @@ def prime_factorization(x):
 
 def main():
     factors = prime_factorization(M)
-    n = N - 1
 
+    n = N - 1
     factorial_exp = {}
     for p in factors.keys():
         exponent_p_of_i = [0] * (n + 1)
