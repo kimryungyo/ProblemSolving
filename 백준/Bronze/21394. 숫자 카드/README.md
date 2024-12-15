@@ -44,7 +44,7 @@
 	<li>이 예제의 경우, 99987이 Albert가 만들 수 있는 가장 큰 수 이다.</li>
 </ul>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/aa6157b9-0c65-4ba5-9f53-4bc639f4cc17/-/preview/" style="height: 224px; width: 400px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="height: 224px; width: 400px;"></p>
 
 <p>입력으로 n장의 숫자 카드가 주어졌을 때, 맨 처음 Albert가 카드를 어떻게 나열해야 가장 큰 수를 만들 수 있는지 찾아서 알려주자.</p>
 
