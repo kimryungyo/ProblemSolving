@@ -1,1 +1,1 @@
-for n in list(open(0))[1:]:print(*[n.rstrip()]*2)
+for n in open(0).read().split()[1:]:print(n,n)
