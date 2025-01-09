@@ -1,1 +1,1 @@
-for n in open(0).read().split()[1:]:print(n,n)
+for _ in[0]*int(input()):print(*[input()]*2)
