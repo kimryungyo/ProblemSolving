@@ -30,7 +30,7 @@ class NonSquareNumberScanner:
     def query(self, k):
         """
         K번째 비제곱수를 찾는 메소드
-        이진 탐색을 이용해 탐색한다
+        bisect 라이브러리를 이용해 이진 탐색을 진행한다
         """
         return bisect_left(self, k)
 
@@ -42,7 +42,7 @@ class NonSquareNumberScanner:
     
     def __getitem__(self, index):
         """
-        인덱스가 주어질 경우 해당 수가 몇번째 비제곱수 후의 수인지 반환하는 메소드
+        인덱스가 몇번째 비제곱수 후의 수인지 반환하는 메소드
         소수 제곱수들로 포함 배제의 원리를 활용해 계산한다
         조합을 구할 때는 itertools.combinations이 아닌 DFS를 이용해 불필요한 탐색을 방지한다
         """
