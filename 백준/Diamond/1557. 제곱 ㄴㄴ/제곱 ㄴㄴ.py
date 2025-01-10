@@ -84,7 +84,9 @@ class NonSquareNumberScanner:
         return index - square_number_count
 
 def solution():
-    """코드 진입점"""
+    """
+    풀이 함수
+    """
 
     # 1,000,000,000번째 비제곱수를 찾기 위한 제곱수의 추측값
     # 정확히는 40,489 이지만 여유분을 두어 45,000으로 설정
