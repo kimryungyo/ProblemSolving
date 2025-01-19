@@ -1,4 +1,5 @@
 from sys import stdin
+input = stdin.readline
 
 def read_pairs(count):
     data = []
@@ -29,19 +30,21 @@ def is_inside_convex(polygon, point):
     
     return cross_product(polygon[left], polygon[left + 1], point) > 0
 
-input = stdin.readline
-N, M, K = map(int, input().split())
+def main():
+    N, M, K = map(int, input().split())
 
-polygon_A = read_pairs(N)
-polygon_B = read_pairs(M)
-sign_points = read_pairs(K)
+    polygon_A = read_pairs(N)
+    polygon_B = read_pairs(M)
+    sign_points = read_pairs(K)
 
-violations = 0
-for point in sign_points:
-    inside_A = is_inside_convex(polygon_A, point)
-    inside_B = is_inside_convex(polygon_B, point)
-    
-    if not inside_A or inside_B:
-        violations += 1
+    violations = 0
+    for point in sign_points:
+        inside_A = is_inside_convex(polygon_A, point)
+        inside_B = is_inside_convex(polygon_B, point)
+        
+        if not inside_A or inside_B:
+            violations += 1
 
-print("YES" if violations == 0 else violations)
+    print("YES" if violations == 0 else violations)
+
+main()
