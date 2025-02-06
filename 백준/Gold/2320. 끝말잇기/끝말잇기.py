@@ -5,7 +5,7 @@ def convert_to_index(char):
     if char == "O": return 3
     if char == "U": return 4
 
-def input_datas():
+def main():
     N = int(input())
     WORDS = []
     for idx in range(N):
@@ -14,10 +14,7 @@ def input_datas():
         w_end = convert_to_index(word[-1])
         info = (w_start, w_end, len(word), idx)
         WORDS.append(info)
-    return N, WORDS
-
-def main():
-    N, WORDS = input_datas()
+        
     created = [ [ False ] * 5 for _ in range(65536) ]
 
     queue = []
