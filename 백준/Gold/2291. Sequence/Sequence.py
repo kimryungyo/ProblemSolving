@@ -1,6 +1,7 @@
 N, M, K = map(int, input().split())
 
-memo = {}
+memo = [ [ [ -1 ] * (M + 1) for _ in range(M + 1) ] for _ in range(N + 1) ]
+
 def get_candidates(slots, remains, minimum):
 
     if slots == 0:
@@ -9,14 +10,14 @@ def get_candidates(slots, remains, minimum):
     if remains < slots * minimum:
         return 0
     
-    if (slots, remains, minimum) in memo:
-        return memo[(slots, remains, minimum)]
+    if memo[slots][remains][minimum] != -1:
+        return memo[slots][remains][minimum]
     
     count = 0
     for candidate in range(minimum, remains+1):
         count += get_candidates(slots-1, remains-candidate, candidate)
 
-    memo[(slots, remains, minimum)] = count
+    memo[slots][remains][minimum] = count
     return count
 
 sequence = []
