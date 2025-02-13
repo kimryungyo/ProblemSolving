@@ -8,9 +8,8 @@ def hanoi(n, start, end, moves):
         hanoi(n - 1, aux, end, moves)
 
 def print_answer(moves):
-    from sys import stdout
-    stdout.write(f"{len(moves)}\n")
-    stdout.write("\n".join(f"{a} {b}" for a, b in moves))
+    print(len(moves))
+    print("\n".join(f"{a} {b}" for a, b in moves))
 
 n = int(input().strip())
 moves = []
