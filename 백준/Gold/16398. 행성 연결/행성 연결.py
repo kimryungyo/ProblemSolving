@@ -9,7 +9,6 @@ for i in range(N):
     for j in range(i, N):
         edges.append( (graph[i][j], i, j) )
 
-
 def union_finder(node):
     if node == union[node]:
         return node
@@ -17,6 +16,7 @@ def union_finder(node):
     return union[node]
 
 union = [ i for i in range(N) ]
+rank = [0] * N
 edges.sort()
 
 total = 0
@@ -24,7 +24,13 @@ for price, a, b in edges:
     au, bu = union_finder(a), union_finder(b)
     if au == bu: continue
 
-    union[au] = bu
+    if rank[au] < rank[bu]:
+        union[au] = bu
+    else:
+        union[bu] = au
+        if rank[au] == rank[bu]:
+            rank[au] += 1
+
     total += price
 
 print(total)
