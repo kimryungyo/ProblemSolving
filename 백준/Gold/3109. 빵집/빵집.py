@@ -5,7 +5,7 @@
 # + 경로 탐색은 재귀 DFS로 구현
 
 from sys import stdin, setrecursionlimit
-setrecursionlimit(1000000)
+setrecursionlimit(10000)
 input = stdin.readline
 R, C = map(int, input().split())
 
